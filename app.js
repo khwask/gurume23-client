@@ -16,7 +16,8 @@ angular.module('myApp').config(function($httpProvider){
 angular.module('myApp').controller('mainCtrl', mainCtrl);
 
 function mainCtrl($resource) {
-    this.pageTitle = "gurume 23 ku";
+    this.pageTitle = "ぐるめ23区";
+    this.description = "いろんな場所のおすすめ料理をお届け";
     var contents = $resource("http://localhost:8000/output.json");
     this.ranks = contents.query();
     
