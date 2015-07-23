@@ -12,9 +12,12 @@
     "url": "https://github.com/khwask/gurume23-client.git"
   },
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "angular": "^1.4.3",
     "angular-resource": "^1.4.3",
+    "bootstrap": "^3.3.5"
+  },
+  "devDependencies": {
     "http-server": "^0.8.0"
   }
 }
