@@ -1,8 +1,15 @@
 # gurume23-client
 
-### Usage
+### 使い方
 
-* How to run client
+* データを配置 (ファイル名は`output.json`)
+   * 例
+```
+{"areaName":"こどもの国駅","rankList":[{"category":"うなぎ","restNum":1}]}
+{"areaName":"つくし野駅","rankList":[{"category":"うなぎ","restNum":1},{"category":"割烹","restNum":1}]}
+```
+
+* サーバ起動
 ```
 git clone https://github.com/khwask/gurume23-client.git
 cd gurume23-client
@@ -10,4 +17,4 @@ npm install
 npm start
 ```
 
-client runs at `http://localhost:8000`.
+`http://localhost:8000`にアクセス
