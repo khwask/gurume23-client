@@ -3,7 +3,6 @@
 ### 使い方
 
 * データを配置 (ファイル名は`output.json`)
-   * 例
 ```
 {"areaName":"こどもの国駅","rankList":[{"category":"うなぎ","restNum":1}]}
 {"areaName":"つくし野駅","rankList":[{"category":"うなぎ","restNum":1},{"category":"割烹","restNum":1}]}
