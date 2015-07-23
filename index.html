@@ -19,13 +19,33 @@
     </div>
     <table class="table table-hover">
       <thead>
-        <th>エリア名</th>
-        <th>No.1</th>
-        <th>No.2</th>
-        <th>No.3</th>
+        <th>
+          <a href="" ng-click="main.order('areaName')">
+            エリア名
+            <span ng-class="main.sortIcon" aria-hidden="true" ng-show="main.sortColumn === 'areaName'"></span>
+          </a>
+        </th>
+        <th>
+          <a href="" ng-click="main.order('rankList[0].restNum')">
+            No.1
+            <span ng-class="main.sortIcon" aria-hidden="true" ng-show="main.sortColumn === 'rankList[0].restNum'"></span>
+          </a>
+        </th>
+        <th>
+          <a href="" ng-click="main.order('rankList[1].restNum')">
+            No.2
+            <span ng-class="main.sortIcon" aria-hidden="true" ng-show="main.sortColumn === 'rankList[1].restNum'"></span>
+          </a>
+        </th>
+        <th>
+          <a href="" ng-click="main.order('rankList[2].restNum')">
+            No.3
+            <span ng-class="main.sortIcon" aria-hidden="true" ng-show="main.sortColumn === 'rankList[2].restNum'"></span>
+          </a>
+        </th>
       </thead>
       <tbody>
-        <tr ng-repeat="rank in main.ranks | filter:searchText">
+        <tr ng-repeat="rank in main.ranks | filter:searchText | orderBy:main.sortColumn:main.reverse">
           <td>{{rank.areaName}}</td>
           <td ng-repeat="cate in rank.rankList">{{cate.category}}({{cate.restNum}})</td>
         </tr>
