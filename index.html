@@ -8,13 +8,31 @@
   <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-controller="mainCtrl as main">
-  <h1>{{main.pageTitle}}</h1>
-  <table class="table">
-    <tr ng-repeat="rank in main.ranks">
-      <td>{{rank.areaName}}</td>
-      <td ng-repeat="cate in rank.rankList">{{cate.category}}:{{cate.restNum}}</td>
-    </tr>
-  </table>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>{{main.pageTitle}}</h1>
+      <p>{{main.description}}</p>
+      <div class="form-inline">
+        <label>なんでも検索</label>
+        <input class="form-control" ng-model="searchText">
+      </div>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <th>エリア名</th>
+        <th>No.1</th>
+        <th>No.2</th>
+        <th>No.3</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="rank in main.ranks | filter:searchText">
+          <td>{{rank.areaName}}</td>
+          <td ng-repeat="cate in rank.rankList">{{cate.category}}({{cate.restNum}})</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <script src="/node_modules/angular/angular.js"></script>
   <script src="/node_modules/angular-resource/angular-resource.js"></script>
   <script src="app.js"></script>
