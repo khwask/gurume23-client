@@ -5,7 +5,7 @@ function mainCtrl($resource) {
     this.pageTitle = "ぐるめ23区";
     this.description = "いろんな場所のおすすめ料理をお届け";
 
-    var part0 = $resource("http://localhost:8000/part-r-00000");
+    var part0 = $resource("part-r-00000");
     this.ranks = part0.query();
 
     this.sortColumn = 'areaName';
