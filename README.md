@@ -2,10 +2,10 @@
 
 ### 使い方
 
-* データを配置 (ファイル名は`output.json`)
+* データを配置 (ファイル名は`part-r-00000`)
 ```
-{"areaName":"こどもの国駅","rankList":[{"category":"うなぎ","restNum":1}]}
-{"areaName":"つくし野駅","rankList":[{"category":"うなぎ","restNum":1},{"category":"割烹","restNum":1}]}
+[{"areaName":"こどもの国駅","rankList":[{"category":"うなぎ","restNum":1}]},
+{"areaName":"つくし野駅","rankList":[{"category":"うなぎ","restNum":1},{"category":"割烹","restNum":1}]}]
 ```
 
 * サーバ起動
